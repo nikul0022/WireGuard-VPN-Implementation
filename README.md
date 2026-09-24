@@ -66,19 +66,17 @@ Client 1 follows the same pattern with its own key pair and `Address = 10.0.0.2/
 
 <img width="1442" height="840" alt="image" src="https://github.com/user-attachments/assets/0ec3ccef-2d52-493c-9731-bc8c4e1d78fa" />
 
-```ini
 interface: wg0
 public key: XTv4XyheqAbHsLkIrt1MmR/IHbd8MSyB/XdSG7419VQ=
 listening port: 51820
 
-```ini
 peer: h0zqusT4llvHjmBei8wdYeCtxHjgfcg14eoVuBxtcCw= # Client 1
 endpoint: 172.16.0.123:53007
 allowed ips: 10.0.0.2/32
 latest handshake: 1 minute, 40 seconds ago
 transfer: 6.92 KiB received, 5.38 KiB sent
 
-```ini
+
 peer: lLvZ+Iycht9X2CQP4/4nJQINmI1T7NWT11yBDXUrA3Y= # Client 2
 endpoint: 172.16.0.122:51966
 allowed ips: 10.0.0.3/32
