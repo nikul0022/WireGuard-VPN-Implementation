@@ -25,7 +25,7 @@ WireGuard is a modern, open-source VPN protocol that uses public-key cryptograph
 
 ## Server Configuration (`/etc/wireguard/wg0.conf`)
 
-<img width="1442" height="840" alt="image" src="https://github.com/user-attachments/assets/ee5d227e-90d9-4dd5-970c-f39f8dc6c9e2" />
+<img width="799" height="481" alt="image" src="https://github.com/user-attachments/assets/5bc79bfb-5b11-47f0-94da-6a6a01806ed0" />
 
 ```ini
 [Interface]
@@ -41,8 +41,6 @@ AllowedIPs = 10.0.0.2/32
 PublicKey = lLvZ+Iycht9X2CQP4/4nJQINmI1T7NWT11yBDXUrA3Y=
 AllowedIPs = 10.0.0.3/32
 ```
-
-## Client Configuration (example — Client 2)
 
 ## Client Configuration
 
@@ -68,11 +66,13 @@ Client 1 follows the same pattern with its own key pair and `Address = 10.0.0.2/
 
 **Client 2 tunnel active and handshaking:**
 
-<img width="785" height="737" alt="image" src="https://github.com/user-attachments/assets/9310393d-38ae-44f0-9627-842cdc7e354a" />
+<img width="1060" height="827" alt="image" src="https://github.com/user-attachments/assets/ccb4c8de-4fee-4e16-b922-d4b0f0a0e251" />
 
 ## Proof of Working Implementation
 
 **Server-side `wg show` output** — confirms both peers completed a handshake and are actively passing traffic:
+
+<img width="1442" height="840" alt="image" src="https://github.com/user-attachments/assets/0ec3ccef-2d52-493c-9731-bc8c4e1d78fa" />
 
 interface: wg0
 public key: XTv4XyheqAbHsLkIrt1MmR/IHbd8MSyB/XdSG7419VQ=
@@ -92,6 +92,8 @@ transfer: 18.61 KiB received, 8.09 KiB sent
 
 **Client 1 → Server and Client 2, over the tunnel:**
 
+<img width="759" height="742" alt="image" src="https://github.com/user-attachments/assets/ecd78314-23d4-4ea0-8fe1-784d1954af51" />
+
 C:\Users\testuser2>ping 10.0.0.1 (server)
 Reply from 10.0.0.1: bytes=32 time<1ms TTL=64 ... 0% loss
 
@@ -99,6 +101,8 @@ C:\Users\testuser2>ping 10.0.0.3 (Client 2)
 Reply from 10.0.0.3: bytes=32 time=1ms TTL=127 ... 0% loss
 
 **Client 2 → Server and Client 1, over the tunnel:**
+
+<img width="785" height="737" alt="image" src="https://github.com/user-attachments/assets/543aed90-6bf1-47bc-b132-3a78a3ae6217" />
 
 C:\Users\vagrant>ping 10.0.0.1 (server)
 Reply from 10.0.0.1: bytes=32 time=1ms TTL=64 ... 0% loss
