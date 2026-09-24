@@ -13,14 +13,6 @@ WireGuard is a modern, open-source VPN protocol that uses public-key cryptograph
 | Client 1 (Windows) | Peer | 10.0.0.2/24 | 172.16.0.123 |
 | Client 2 (Windows) | Peer | 10.0.0.3/24 | 172.16.0.122 |
 
-            [ Kali VM - wg0 server ]
-               10.0.0.1/24 : 51820
-                /              \
-    VPN tunnel /                \ VPN tunnel
-               /                  \
-[ Client 1 ]                  [ Client 2 ]
-10.0.0.2/24                   10.0.0.3/24
-
 <img width="1280" height="722" alt="image" src="https://github.com/user-attachments/assets/6552bf93-b97f-40d8-a077-a437ac2ef8a5" />
 
 ## Server Configuration (`/etc/wireguard/wg0.conf`)
