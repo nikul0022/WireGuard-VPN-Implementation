@@ -23,6 +23,7 @@ WireGuard is a modern, open-source VPN protocol that uses public-key cryptograph
 
 
 *(See `screenshots/network-diagram.png` for the original diagram.)*
+<img width="1442" height="840" alt="image" src="https://github.com/user-attachments/assets/fc107c38-3900-4cae-91d7-fcef52184182" />
 
 ## Server Configuration (`/etc/wireguard/wg0.conf`)
 
