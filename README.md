@@ -21,10 +21,11 @@ WireGuard is a modern, open-source VPN protocol that uses public-key cryptograph
 [ Client 1 ]                  [ Client 2 ]
 10.0.0.2/24                   10.0.0.3/24
 
-
 <img width="1280" height="722" alt="image" src="https://github.com/user-attachments/assets/6552bf93-b97f-40d8-a077-a437ac2ef8a5" />
 
 ## Server Configuration (`/etc/wireguard/wg0.conf`)
+
+<img width="1442" height="840" alt="image" src="https://github.com/user-attachments/assets/ee5d227e-90d9-4dd5-970c-f39f8dc6c9e2" />
 
 ```ini
 [Interface]
@@ -43,16 +44,17 @@ AllowedIPs = 10.0.0.3/32
 
 ## Client Configuration (example — Client 2)
 
-```ini
-[Interface]
-PrivateKey = <client2-private-key-redacted>
-Address = 10.0.0.3/24
+## Client Configuration
 
-[Peer]
-PublicKey = XTv4XyheqAbHsLkIrt1MmR/IHbd8MSyB/XdSG7419VQ=
-AllowedIPs = 10.0.0.0/24
-Endpoint = 172.16.0.124:51820
-```
+**Client 1:**
+
+<img width="780" height="630" alt="image" src="https://github.com/user-attachments/assets/db22a36d-1d3b-418e-acfc-10af718e1cce" />
+
+**Client 2:**
+
+<img width="780" height="634" alt="image" src="https://github.com/user-attachments/assets/72d6cdfc-05ed-43b6-aa1e-88b13768a3cf" />
+
+Both clients point their `Endpoint` at the server's public IP and port, with `AllowedIPs = 10.0.0.0/24` to route all tunnel traffic through the hub.
 
 Client 1 follows the same pattern with its own key pair and `Address = 10.0.0.2/24`.
 
@@ -63,6 +65,10 @@ Client 1 follows the same pattern with its own key pair and `Address = 10.0.0.2/
 3. Installed the WireGuard desktop client on both Windows machines, generated a key pair per client, and created a tunnel config pointing `Endpoint` at the server's public IP and port.
 4. Brought the interface up (`wg-quick up wg0` on the server; **Activate** in the Windows client), confirmed the handshake with `wg show`.
 5. Verified full connectivity by pinging across the tunnel in both directions.
+
+**Client 2 tunnel active and handshaking:**
+
+<img width="785" height="737" alt="image" src="https://github.com/user-attachments/assets/9310393d-38ae-44f0-9627-842cdc7e354a" />
 
 ## Proof of Working Implementation
 
