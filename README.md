@@ -87,21 +87,21 @@ transfer: 18.61 KiB received, 8.09 KiB sent
 
 <img width="759" height="742" alt="image" src="https://github.com/user-attachments/assets/ecd78314-23d4-4ea0-8fe1-784d1954af51" />
 
-C:\Users\testuser2>ping 10.0.0.1 (server)
-Reply from 10.0.0.1: bytes=32 time<1ms TTL=64 ... 0% loss
+C:\Users\testuser2>ping 10.0.0.1 (server)  
+Reply from 10.0.0.1: bytes=32 time<1ms TTL=64 ... 0% loss  
 
-C:\Users\testuser2>ping 10.0.0.3 (Client 2)
-Reply from 10.0.0.3: bytes=32 time=1ms TTL=127 ... 0% loss
+C:\Users\testuser2>ping 10.0.0.3 (Client 2)  
+Reply from 10.0.0.3: bytes=32 time=1ms TTL=127 ... 0% loss  
 
 **Client 2 → Server and Client 1, over the tunnel:**
 
 <img width="785" height="737" alt="image" src="https://github.com/user-attachments/assets/543aed90-6bf1-47bc-b132-3a78a3ae6217" />
 
-C:\Users\vagrant>ping 10.0.0.1 (server)
-Reply from 10.0.0.1: bytes=32 time=1ms TTL=64 ... 0% loss
+C:\Users\vagrant>ping 10.0.0.1 (server)  
+Reply from 10.0.0.1: bytes=32 time=1ms TTL=64 ... 0% loss  
 
-C:\Users\vagrant>ping 10.0.0.2 (Client 1)
-Reply from 10.0.0.2: bytes=32 time=1ms TTL=127 ... 0% loss
+C:\Users\vagrant>ping 10.0.0.2 (Client 1)  
+Reply from 10.0.0.2: bytes=32 time=1ms TTL=127 ... 0% loss  
 
 
 All three nodes could reach each other with 0% packet loss, confirming the tunnel was correctly routing encrypted traffic end-to-end.
